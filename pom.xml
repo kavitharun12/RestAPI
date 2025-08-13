@@ -28,8 +28,8 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-undertow</artifactId> <!-- Add Undertow as alternative to Tomcat -->
-            <version>2.4.16.SP1</version> <!-- Add Undertow version -->
+            <artifactId>spring-boot-starter-undertow</artifactId> <!-- Add Undertow as an alternative to Tomcat -->
+            <version>2.4.12.RELEASE</version> <!-- Add the Undertow version -->
         </dependency>
 
         <!-- ... -->
