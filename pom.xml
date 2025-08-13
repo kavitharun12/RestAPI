@@ -15,41 +15,24 @@
     <!-- ... -->
 
     <dependencies>
-        <!-- Spring Boot Starters -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-undertow</artifactId> <!-- Add Undertow as an alternative to Tomcat -->
-            <version>2.4.12.RELEASE</version> <!-- Add the Undertow version -->
-        </dependency>
-
         <!-- ... -->
 
         <!-- JJWT (JSON Web Token) - Updated to latest secure version -->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-api</artifactId>
-            <version>0.11.5</version> <!-- Updated to a secure version -->
+            <version>0.11.5</version> <!-- Updated JJWT version -->
         </dependency>
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-impl</artifactId>
-            <version>0.11.5</version> <!-- Updated to a secure version -->
+            <version>0.11.5</version> <!-- Updated JJWT version -->
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-jackson</artifactId>
-            <version>0.11.5</version> <!-- Updated to a secure version -->
+            <version>0.11.5</version> <!-- Updated JJWT version -->
             <scope>runtime</scope>
         </dependency>
 
@@ -59,12 +42,16 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.9.1</version> <!-- Updated to the latest version -->
+            <version>5.9.1</version> <!-- Updated JUnit 5 version -->
             <scope>test</scope>
         </dependency>
 
         <!-- ... -->
     </dependencies>
 
-    <!-- ... -->
+    <build>
+        <plugins>
+            <!-- ... -->
+        </plugins>
+    </build>
 </project>
