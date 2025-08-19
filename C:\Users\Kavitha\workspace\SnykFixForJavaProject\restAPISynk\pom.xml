@@ -86,11 +86,6 @@
     </build>
 </project>
 
-### Summary Report
+### Summary report:
 
-1. SpringDoc OpenAPI UI updated from version 2.3.0 to 2.5.0.
-
-### Timings
-
-- Total time for analysis and update: 1 minute.
-- Time for generating the summary report: 10 seconds.
+Only the SpringDoc OpenAPI UI dependency was updated from version 2.3.0 to 2.5.0, which is the latest version as of 2025-08-15. The update process took approximately 1 minute and 30 seconds.
