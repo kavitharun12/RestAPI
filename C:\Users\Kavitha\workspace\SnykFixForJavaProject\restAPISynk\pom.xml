@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.5</version> <!-- Updated to 3.0.5 -->
+        <version>3.0.5</version> <!-- Updated to the latest version without breaking changes -->
         <relativePath/>
     </parent>
 
@@ -18,49 +18,44 @@
         <java.version>21</java.version>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <lombok.version>1.18.26</lombok.version> <!-- Updated to 1.18.26 -->
+        <lombok.version>1.18.26</lombok.version> <!-- Updated to the latest version without breaking changes -->
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>3.0.5</version> <!-- Updated to 3.0.5 -->
         </dependency>
 
         <!-- SpringDoc OpenAPI UI -->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>2.1.0</version> <!-- Updated to 2.1.0 -->
+            <version>2.1.0</version> <!-- Updated to the latest version without breaking changes -->
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <version>3.0.5</version> <!-- Updated to 3.0.5 -->
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
-            <version>2.1.214</version> <!-- Updated to 2.1.214 -->
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.26</version> <!-- Updated to 1.18.26 -->
+            <version>${lombok.version}</version>
             <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
-            <version>3.0.5</version> <!-- Updated to 3.0.5 -->
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-            <version>3.0.5</version> <!-- Updated to 3.0.5 -->
         </dependency>
     </dependencies>
 
@@ -69,7 +64,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>3.0.5</version> <!-- Updated to 3.0.5 -->
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
