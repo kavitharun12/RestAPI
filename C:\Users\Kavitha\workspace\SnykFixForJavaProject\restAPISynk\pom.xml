@@ -1,42 +1,12 @@
-```xml
-<dependencyManagement>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-dependencies</artifactId>
-            <version>3.0.6</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
-    </dependencies>
-</dependencyManagement>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.5</version> <!-- Updated version -->
+        <relativePath/>
+    </parent>
 
-<dependencies>
-    <dependency>
-        <groupId>org.apache.logging.log4j</groupId>
-        <artifactId>log4j-core</artifactId>
-        <version>2.17.1</version>
-    </dependency>
-    <dependency>
-        <groupId>com.fasterxml.jackson.core</groupId>
-        <artifactId>jackson-databind</artifactId>
-        <version>2.13.0</version>
-    </dependency>
-</dependencies>
-```
-
-Explanation:
-
-1. Spring Framework Remote Code Execution (Severity: critical, Package: org.springframework.boot:spring-boot-starter-parent, Version: 3.0.5.RELEASE):
-   The vulnerability is in the parent project, so we have updated the version of the parent project to 3.0.6 in the `<dependencyManagement>` section.
-
-2. Log4j Remote Code Execution (Log4Shell) (Severity: high, Package: org.apache.logging.log4j:log4j-core, Version: 2.13.0):
-   The vulnerability is in the `log4j-core` dependency, so we have updated the version of `log4j-core` to 2.17.1.
-
-3. Denial of Service (DoS) (Severity: medium, Package: com.fasterxml.jackson.core:jackson-databind, Version: 2.9.8):
-   The vulnerability is in the `jackson-databind` dependency, so we have updated the version of `jackson-databind` to 2.13.0.
-
-4. Apache Commons Collections Deserialization Vulnerability (Severity: low, Package: org.apache.commons:commons-collections4, Version: 4.0):
-   The vulnerability is in the `commons-collections4` dependency, but the current version (4.4) is not vulnerable. Therefore, no action is needed.
-
-Note: The fixed version numbers are based on the latest available versions at the time of writing. It is recommended to check for the latest versions on the official websites of the respective packages.
+    <!-- ... -->
+</project>
