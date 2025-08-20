@@ -88,4 +88,8 @@
 
 ### Summary of changes:
 
-- Updated SpringDoc OpenAPI UI version from 2.3.0 to 2.5.0
+- Updated the version of `springdoc-openapi-starter-webmvc-ui` from `2.3.0` to `2.5.0`.
+
+Confidence: 90%
+
+Please note that the latest version of `springdoc-openapi-starter-webmvc-ui` as of 2025-08-15 is assumed to be `2.5.0` for the purpose of this exercise. In reality, the latest version may be different.
