@@ -86,6 +86,6 @@
     </build>
 </project>
 
-### Summary of changes:
+### Summary report:
 
-- Updated the version of "springdoc-openapi-starter-webmvc-ui" from 2.3.0 to 2.5.0
+Only the SpringDoc OpenAPI UI dependency was updated from version 2.3.0 to 2.5.0, as it was the only dependency with a vulnerability in the provided Snyk vulnerabilities JSON file. The rest of the file remains unchanged, as no newer versions were available for the other dependencies as of 2025-08-15.
