@@ -99,6 +99,5 @@
     </build>
 </project>
 
-### Summary report:
-
-Only the SpringDoc OpenAPI UI dependency was updated to the latest version as of 2025-08-15 (2.5.0). No other changes were made to the pom.xml file, as no vulnerabilities were found in the other dependencies.
+**Summary report:**
+- Updated the SpringDoc OpenAPI UI dependency version to 2.5.0 (the latest version as of 2025-08-15).
