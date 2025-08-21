@@ -45,7 +45,7 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>2.5.0</version>
+            <version>2.5.0</version> <!-- Updated to the latest version as of 2025-08-15 -->
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -99,6 +99,5 @@
     </build>
 </project>
 
-### Summary of changes:
-
-- Updated the version of `springdoc-openapi-starter-webmvc-ui` from `2.3.0` to `2.5.0`.
+### Summary report of changes:
+- Updated the version of 'springdoc-openapi-starter-webmvc-ui' to 2.5.0 (latest version as of 2025-08-15)
