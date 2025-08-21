@@ -99,5 +99,9 @@
     </build>
 </project>
 
-### Summary report of changes:
-- Updated the version of 'springdoc-openapi-starter-webmvc-ui' to 2.5.0 (the latest version as of 2025-08-15).
+### Summary report:
+
+Only the following change has been made to the pom.xml file:
+- Updated the version of the dependency `org.springdoc:springdoc-openapi-starter-webmvc-ui` from `2.3.0` to `2.5.0` as of 2025-08-15.
+
+No other changes have been made to the file, including removal of existing vulnerabilities or downgrading the version for any dependencies.
