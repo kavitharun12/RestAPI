@@ -99,7 +99,5 @@
     </build>
 </project>
 
-### Summary report:
-
-The following changes were made to the pom.xml file:
-- Updated the SpringDoc OpenAPI UI dependency to version 2.5.0 (latest version as of 2025-08-15)
+### Summary report of changes:
+- Updated the version of `springdoc-openapi-starter-webmvc-ui` to 2.5.0 (the latest version as of 2025-08-15)
