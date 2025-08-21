@@ -98,7 +98,3 @@
         </plugins>
     </build>
 </project>
-
-Summary report:
-- Updated the version of "springdoc-openapi-starter-webmvc-ui" to 2.5.0, which is the latest version as of 2025-08-15.
-- No other changes were made as they were no other vulnerabilities found in the provided pom.xml file.
