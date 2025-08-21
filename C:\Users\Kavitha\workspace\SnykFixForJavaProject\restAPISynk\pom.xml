@@ -99,5 +99,5 @@
     </build>
 </project>
 
-**Summary Report:**
-- Updated `org.springdoc:springdoc-openapi-starter-webmvc-ui` from version 2.3.0 to 2.5.0, which is the latest version as of 2025-08-15.
+Summary report:
+- Updated the version of `springdoc-openapi-starter-webmvc-ui` to 2.5.0, which is the latest version as of 2025-08-15.
