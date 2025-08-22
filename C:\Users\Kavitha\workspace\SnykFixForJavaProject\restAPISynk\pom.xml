@@ -38,7 +38,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
 <dependency>
 <groupId>org.apache.tomcat.embed</groupId>
 <artifactId>tomcat-embed-core</artifactId>
-<version>11.0.45</version> <!-- Updated version to the latest version as of 2025-08-15 -->
+<version>11.0.8</version> <!-- Updated version to the latest version as of 2025-08-15 -->
 </dependency>
 ...
 </dependencies>
