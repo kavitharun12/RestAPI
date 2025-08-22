@@ -1,20 +1,12 @@
-Here is the fixed `pom.xml` content with the latest version of the vulnerable dependency as of 2025-08-15:
-
-```xml
 <project ...>
-    ...
-    <dependencies>
-        ...
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.4.14</version>
-        </dependency>
-    </dependencies>
-    ...
+...
+<dependencies>
+...
+<dependency>
+<groupId>ch.qos.logback</groupId>
+<artifactId>logback-classic</artifactId>
+<version>1.4.14</version>
+</dependency>
+</dependencies>
+...
 </project>
-```
-
-Based on the provided vulnerability report, the vulnerable dependency is `ch.qos.logback:logback-classic` with the version `1.4.7`. However, in your `pom.xml` file, you are already using a version higher than the fixed version (`1.4.14`), so no changes are needed.
-
-Therefore, the
