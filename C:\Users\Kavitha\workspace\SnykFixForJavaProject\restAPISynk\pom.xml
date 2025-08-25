@@ -64,7 +64,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
 <dependency>
 <groupId>ch.qos.logback</groupId>
 <artifactId>logback-core</artifactId>
-<version>1.5.16</version>
+<version>1.5.16</version> <!-- Updated to 1.5.16 to fix the vulnerability -->
 </dependency>
 </dependencies>
 
