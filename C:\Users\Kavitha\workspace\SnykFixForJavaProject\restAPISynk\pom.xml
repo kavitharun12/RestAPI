@@ -61,6 +61,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
 <artifactId>logback-classic</artifactId>
 <version>1.4.14</version>
 </dependency>
+<dependency>
+<groupId>ch.qos.logback</groupId>
+<artifactId>logback-core</artifactId>
+<version>1.5.1</version>
+</dependency>
 </dependencies>
 
 <build>
