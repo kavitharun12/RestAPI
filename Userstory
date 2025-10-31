@@ -1,0 +1,21 @@
+DEVELOP SOFTWARE USING ARTIFICIAL INTELLIGENCE (Al) TOOLS/AI Agents FOR THE FOLLOWING USE STORY
+User Story
+Smart Retail Operations Platform
+As a warehouse supervisor at a retail company, I want a simple inventory classification tool that helps me categorize items into A, B, and C groups based on their value contribution, so that I can prioritize stock management and focus on high-value items without needing advanced analytics.
+Objective
+To develop a basic software module that enables retail inventory teams to classify products using ABC analysis and manage them accordingly.
+ABC Classification Logic
+• A items: High-value, low-quantity items (e.g., premium electronics) - require tight control and frequent review.
+• B items: Moderate value and quantity - managed with regular monitoring.
+• C items: Low-value, high-quantity items (e.g., accessories) - managed with minimal oversight.
+Key Features
+1. Rule Engine: To set rules to classify the items into A/B/C category
+2. Manual Data Entry: Users can input item name, quantity, and unit cost.
+3. Automatic Classification: System assigns A/B/C category for the items
+Item Threshold: The parameter screen allows entry of the minimum inventory level for initiating reorders and the maximum inventory level at which no further ordering will be made for each category.
+5. Dashboard: Displays categorized items with filters and summary totals.
+6. Export Option: Download categorized inventory as CSV or PDF for offline use.
+Benefits
+• Helps prioritize inventory control without complex systems.
+Reduces overstocking of low-value items.
+• Improves focus on high-impact inventory.
