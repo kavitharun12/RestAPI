@@ -1,0 +1,19 @@
+Deliverables
+1. Functional requirements document
+2. Application Architecture
+3. Technical Architecture
+Database design / Data Models
+5. UI/Ux Design
+6. Software code & Working Software
+7. Functional Test scripts
+8. User manual
+Instructions
+Use Al tools or Build Your Own Al Agents
+(BYOAA) to develop the software and deliverables.
+Deliverables are expected to be of production-level quality, ensuring excellence in both content and look & feel.
+• Selection of Tools: Carefully evaluate and select the most suitable Al tools or frameworks for each phase of the project. If building custom Al agents, ensure they are scalable, maintainable. Additional weightage will be given if team builds their own Al agent to create the deliverables.
+• Quality Standards: Adhere strictly to coding standards and best practices for software development. Apply consistent design patterns, code reviews, and automated testing to maintain high quality.
+• Integration: Ensure seamless integration of components with the overall application architecture. Validate interoperability with existing systems and databases.
+• Testing: Prepare comprehensive test cases, including both functional and nonfunctional scenarios.
+• Documentation: Maintain clear and detailed documentation for all deliverables, including architecture diagrams, data models, and user manuals. Update documents regularly as changes are made.
+• User Experience: Prioritise a user-centric approach in UI/UX design. Avoid using Streamlit or Gradio for the user interface.
