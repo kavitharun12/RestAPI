@@ -1,0 +1,41 @@
+Goal
+
+Fully automate detection and remediation of Snyk-reported Maven vulnerabilities: generate candidate pom fixes (AI), validate by building & running the app, retry up to 3 times on build failures with specialized fix attempts, and create a GitHub branch + PR with the final working pom.
+Context
+
+File: SnykScanMultipleFixMavenPR_Sep24_demo.py
+Runs locally on Windows as part of a remediation pipeline for the restAPISynk Maven project.
+Inputs: Snyk JSON (snyk-results.json), repository pom.xml (restAPISynk/pom.xml), environment variables (MISTRAL_API_KEY, GITHUB_TOKEN, GITHUB_REPO).
+Outputs: fixed pom.xml saved locally and per-vulnerability backups, success/failure summary files, timestamped terminal logs, final_remediation_report.md, and a GitHub PR if changes exist.
+Source (key components & responsibilities)
+
+Environment & paths: constants for POM_FILE, SNYK_RESULTS_PATH, Mistral/GitHub config.
+scan_snyk_vulnerabilities(): run Snyk CLI, save JSON results, handle Snyk exit codes/errors.
+get_vulnerabilities(): parse snyk-results.json into vulnerability list.
+get_fix_from_mistral() / get_fix_from_mistral_for_build_failed(): call Mistral AI to produce candidate pom and a summary (retry-specific prompt includes terminal logs/error signature and available Maven versions).
+postprocess_pom(): pragmatic POM fixes: remove explicit versions when parent manages them, align springdoc version, add validation dependency, validate known problematic versions.
+save_fixed_pom(), restore_pom(): persist candidate pom to disk and create backups.
+run_maven_and_spring_stop(): run mvn -U clean install, start spring-boot:run, stream logs, detect successful startup by log signatures, stop app after short wait.
+Retry loop: on build/start failure, run up to 3 retry attempts using get_fix_from_mistral_for_build_failed with terminal log context, avoid duplicate POMs, promote failure summaries to success when resolved.
+Summary/Reporting: save_summary(), append_summary(), promote_failure_summary_to_success(), create_detailed_final_summary_report().
+GitHub integration: create_branch_and_commit() — create branch from default, update repo pom path, create PR.
+Logging: tee stdout/stderr to a timestamped terminal log file for prompts and debugging.
+Expectation (behavior and success criteria)
+
+For each vulnerability:
+Try an AI-generated fix, postprocess and save it.
+Validate by running Maven build and starting the Spring Boot app.
+Consider the fix successful if mvn build returns code 0 and the Spring Boot log shows startup signatures (e.g., "Started ... in ... seconds", "Tomcat started on port", or the app class start message).
+If build/start fails, perform up to 3 retry attempts using the failure-aware AI prompt (includes terminal logs, error signature, available Maven versions). Each retry must attempt a distinct variation of the fix.
+Track categories: success-first-attempt, success-after-retry (record attempt number), failures, and "no fix available" (inferred from Snyk fields).
+After processing all vulnerabilities:
+Generate a detailed final remediation report (includes lists and counts of each category).
+Create a single branch and PR (if the final working pom differs from original) containing the repo-relative pom.xml update and a descriptive PR body.
+Robustness:
+Handle Snyk CLI errors (missing pom, permission issues) and Mistral 429s / API failures gracefully (retry or mark as failed).
+Preserve last-known-good pom and restore it between retries to avoid compounding broken changes.
+Record full terminal logs for audit and to feed back into AI retry prompts.
+Security / operational notes:
+Requires valid MISTRAL_API_KEY and GITHUB_TOKEN (ensure tokens not hard-coded).
+Running Maven and starting the app requires proper JAVA_HOME and network access to Maven Central.
+PR creation expects the script's GitHub token to have repo write/PR permissions.
